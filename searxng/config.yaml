@@ -1,5 +1,5 @@
 name: "SearXNG Search Engine"
-version: "1.0.0"
+version: "1.0.13"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/searxng/searxng"
