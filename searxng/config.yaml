@@ -3,6 +3,7 @@ version: "1.0.13"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/searxng/searxng"
+image: "ghcr.io/tmoreton/searxng-{arch}"
 logo: "logo.png"
 arch:
   - aarch64
