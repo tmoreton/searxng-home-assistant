@@ -1,0 +1,46 @@
+name: "SearXNG Search Engine"
+version: "1.0.0"
+slug: "searxng"
+description: "Privacy-respecting metasearch engine for Home Assistant"
+url: "https://github.com/searxng/searxng"
+logo: "logo.png"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+init: false
+startup: application
+boot: auto
+host_network: true
+ports:
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: SearXNG web interface and API
+webui: "http://homeassistant.local:8080/"
+options:
+  safe_search: 0
+  enable_google: true
+  enable_duckduckgo: true
+  enable_brave: true
+  enable_bing: true
+  enable_wikipedia: true
+  enable_reddit: true
+  enable_github: true
+  enable_stackoverflow: true
+schema:
+  safe_search: list(0|1|2)
+  enable_google: bool
+  enable_duckduckgo: bool
+  enable_brave: bool
+  enable_bing: bool
+  enable_wikipedia: bool
+  enable_reddit: bool
+  enable_github: bool
+  enable_stackoverflow: bool
+environment:
+  SEARXNG_BASE_URL: "http://homeassistant.local:8080/"
+  SEARXNG_SETTINGS_PATH: "/etc/searxng/settings.yml"
+
+

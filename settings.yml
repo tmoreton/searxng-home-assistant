@@ -1,0 +1,89 @@
+use_default_settings:
+  engines:
+    keep_only:
+      - google
+      - duckduckgo
+      - brave
+      - bing
+      - wikipedia
+      - reddit
+      - github
+      - stackoverflow
+      - google news
+      - bing news
+
+general:
+  debug: false
+  instance_name: "OSRS SearXNG"
+  contact_url: false
+  enable_metrics: false
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  max_page: 0
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "osrs-searxng-secret-key-change-in-production"
+  limiter: false
+  image_proxy: true
+  http_protocol_version: "1.1"
+  method: "GET"
+  bind_address: "0.0.0.0"
+  port: 8080
+
+ui:
+  static_use_hash: true
+  default_locale: "en"
+  query_in_title: false
+  infinite_scroll: false
+  center_alignment: false
+  default_theme: simple
+  theme_args:
+    simple_style: auto
+
+plugins:
+  searx.plugins.hash_plugin.SXNGPlugin:
+    active: true
+  searx.plugins.self_info.SXNGPlugin:
+    active: true
+  searx.plugins.tracker_url_remover.SXNGPlugin:
+    active: true
+
+engines:
+  - name: google
+    disabled: false
+    weight: 1.0
+  - name: google news
+    disabled: false
+    weight: 1.0
+  - name: duckduckgo
+    disabled: false
+    weight: 0.8
+  - name: brave
+    disabled: false
+    weight: 0.7
+  - name: bing
+    disabled: false
+    weight: 0.5
+  - name: bing news
+    disabled: false
+    weight: 0.8
+  - name: wikipedia
+    disabled: false
+    weight: 1.0
+  - name: reddit
+    disabled: false
+    weight: 0.7
+  - name: github
+    disabled: false
+    weight: 0.8
+  - name: stackoverflow
+    disabled: false
+    weight: 0.9
+
+
