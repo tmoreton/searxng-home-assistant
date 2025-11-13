@@ -17,7 +17,7 @@ ports:
   8080/tcp: 8080
 ports_description:
   8080/tcp: SearXNG web interface and API
-webui: "http://homeassistant.local:8080/"
+webui: "http://[HOST]:[PORT:8080]"
 options:
   safe_search: 0
   enable_google: true
